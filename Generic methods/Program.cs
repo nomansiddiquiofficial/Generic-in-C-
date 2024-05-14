@@ -88,14 +88,33 @@ class Progrm
         employee.name = "Test";
         employee.age = 1;
         employee.desination = "CEO";
+        
+        Employee employee1 = new Employee();
+        employee1.name = "Test1";
+        employee1.age = 2;
+        employee1.desination = "MD";
+
+        
+
 
         List<Employee> Emplist = new List<Employee>();
         Emplist.Add(employee);
-        foreach (Employee s in Emplist)
-        {
-            Console.WriteLine(s.name + " " );
-        }
+        Emplist.Add(employee1);
+        //foreach (Employee s in Emplist)
+        //{
+        //    Console.WriteLine(s.name + " " );
+        //}
 
+
+        Employee employee2 = Emplist.Find(e => e.name == "Test");
+        if (employee2 != null)
+        {
+            Console.WriteLine(employee2.name + " " + employee2.age + " " + employee2.desination);
+        }
+        else
+        {
+            Console.WriteLine("Employee not found.");
+        }
 
     }
 
