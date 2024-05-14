@@ -116,6 +116,13 @@ class Progrm
             Console.WriteLine("Employee not found.");
         }
 
+
+        Employee[] empArr = Emplist.ToArray();
+        foreach (Employee item in empArr)
+        {
+            Console.WriteLine(item.name);   //.name .age
+        }
+
     }
 
 
